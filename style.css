@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1rem;
+    margin:10px;
+}
+#menu-container{
+    border-radius: 10px;
+    grid-area: menu-container;
+    display: grid;
+    justify-content: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    justify-content: center;
+    gap: 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+main {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-columns: 1fr;
+}
+section {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin:10px;
+}
+.profile{
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-rows: 1.75fr 0.25fr;
+    grid-template-areas: 
+    "about profile-image"
+    "wikipedia profile-image";
+}
+#about{
+    grid-area:about;
+    background-color: aquamarine;
+}
+#wikipedia{
+    grid-area:wikipedia;
+    background-color:cornsilk;
+}
+#blogs{
+    background-color: aquamarine;;
+}
+#gallery{
+    background-color:burlywood;
+}
+#hobbies{
+    background-color:lightsteelblue;
+}
+#profile-image {
+    grid-area: profile-image;
+    align-items: center; 
+    width:fit-content;
+    height:fit-content;
+    background-color: darkgray;
+    margin-bottom: 0px;
+}
+
+#profile-image img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.publication-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-align: center;
+}
+.publication-card:hover {
+    transform: scale(1.1);
+}
+.publication-card, .gallery-item {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+i{
+    margin:10px;
+}
+#blogs ul{
+    list-style: none;
+}
+.pub-image img{
+    width: 100%; 
+    height: auto; 
+    max-height: 100%; 
+    object-fit: contain; 
+    border-radius: 10px;
+}
+.gallery-item:hover {
+    transform: scale(1.65);
+}
+.gallery-item img{
+    width: 100%; 
+    height: auto; 
+    max-height: 100%; 
+    object-fit:contain; 
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.publicat{
+    color:saddlebrown;
+}
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+.gallery-item {
+    height: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+    
+    #menu-container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+    
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    nav ul li {
+        padding: 10px;
+    }
+    
+    .profile {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "profile-image"
+            "about"
+            "wikipedia";
+        height: auto;
+    }
+    
+    #profile-image img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .grid-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 5px;
+    }
+    
+    .gallery-item {
+        height: auto;
+    }
+    
+    .gallery-item img {
+        width: 100%;
+    }
+}
